@@ -7,7 +7,6 @@ import {
   InputLeftElement,
   InputGroup,
   forwardRef,
-  Box,
 } from "@chakra-ui/react";
 
 import {
@@ -31,7 +30,7 @@ type inputVariationOptions = {
 };
 
 const inputVariation: inputVariationOptions = {
-  default: "gray.200",
+  default: "gray.300",
   error: "red.500",
   focus: "purple.800",
   filled: "green.500",
@@ -65,7 +64,7 @@ const InputBase: ForwardRefRenderFunction<HTMLInputElement, InputProps> = (
 
   return (
     <FormControl isInvalid={!!error}>
-      {!!label && <FormLabel>{label}</FormLabel>}
+      {!!label && <FormLabel color="gray.400">{label} </FormLabel>}
 
       <InputGroup flexDirection="column">
         {Icon && (
@@ -84,7 +83,7 @@ const InputBase: ForwardRefRenderFunction<HTMLInputElement, InputProps> = (
           onBlurCapture={handleInputBlur}
           variant="outline"
           _hover={{ bgColor: "gray.100" }}
-          _placeholder={{ color: "gray.300" }}
+          _placeholder={{ color: "gray.400" }}
           size="lg"
           h="60px"
           ref={ref}
